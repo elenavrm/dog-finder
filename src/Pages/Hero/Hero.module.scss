@@ -1,0 +1,62 @@
+@use '../../app/styles/vars.scss' as *;
+@use '../../app/styles/fonts.scss' as *;
+
+.mainPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+
+    h1 {
+        font-family: --font-open-sans;
+        font-size: 40px;  
+        font-weight: lighter;
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-family: --font-open-sans;
+        font-size: 22px;  
+        color: #555;
+        max-width: 90%; 
+        line-height: 1.5;
+    }
+}
+
+
+@media (min-width: 650px) {
+    .mainPage {
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 34px;  
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 18px;  
+        max-width: 80%;
+    }
+}
+
+
+@media (min-width: 1100px) {
+    .mainPage {
+        padding: 50px;
+    }
+
+    h1 {
+        font-family: --font-open-sans;
+        font-size: 40px;  
+        margin-bottom: 30px;
+    }
+
+    p {
+        font-size: 20px; 
+        max-width: 70%;
+    }
+}

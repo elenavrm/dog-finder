@@ -1,0 +1,164 @@
+@use '../../app/styles/vars.scss' as *;
+@use '../../app/styles/fonts.scss' as *;
+
+// Variables for breakpoints
+$tablet: 650px;
+$desktop: 1100px;
+$desktop-md: 1210px;
+$wideScreen: 1700px;
+
+@mixin tablet {
+    @media (min-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin desktop-md {
+    @media (min-width: #{$desktop-md}) {
+        @content;
+    }
+}
+
+@mixin wideScreen {
+    @media (min-width: #{$wideScreen}) {
+        @content;
+    }
+}
+
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    width: 100%;
+}
+
+h2 {
+    font-family: --font-open-sans;
+    font-size: 30px;
+    color: green;
+    margin-bottom: 20px;
+}
+
+// Form styling
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.inputField {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: --font-open-sans;
+    font-size: 16px;
+}
+
+// Error message styling
+.errorMessage {
+    color: red;
+    margin-top: 10px;
+}
+
+// Button styling
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: --font-open-sans;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+// Tablet-specific adjustments
+@include tablet {
+    h2 {
+        font-size: 32px;
+    }
+
+    .loginForm {
+        max-width: 450px;
+    }
+
+    .inputField {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+}
+
+// Desktop-specific adjustments
+@include desktop {
+    h2 {
+        font-size: 34px;
+    }
+
+    .loginForm {
+        max-width: 500px;
+    }
+
+    .inputField {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 20px;
+    }
+}
+
+// Large desktop (desktop-md) adjustments
+@include desktop-md {
+    h2 {
+        font-size: 36px;
+    }
+
+    .loginForm {
+        max-width: 550px;
+    }
+
+    .inputField {
+        font-size: 22px;
+    }
+
+    button {
+        font-size: 22px;
+    }
+}
+
+// Wide screen adjustments
+@include wideScreen {
+    h2 {
+        font-size: 38px;
+    }
+
+    .loginForm {
+        max-width: 600px;
+    }
+
+    .inputField {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 24px;
+    }
+}
